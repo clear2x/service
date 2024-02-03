@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.dynamic",
+      "type": "com.code.configure.DataSourceConfigure",
+      "sourceType": "com.code.configure.DataSourceConfigure"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.datasource.dynamic.datasource",
+      "type": "java.util.Map<java.lang.String,com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DataSourceProperty>",
+      "sourceType": "com.code.configure.DataSourceConfigure"
+    },
+    {
+      "name": "spring.datasource.dynamic.primary",
+      "type": "java.lang.String",
+      "sourceType": "com.code.configure.DataSourceConfigure"
+    }
+  ],
+  "hints": []
+}

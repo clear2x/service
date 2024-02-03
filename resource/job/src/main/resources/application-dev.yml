@@ -1,0 +1,44 @@
+server:
+  port: 8804
+
+spring:
+  ## spring.profiles.include 无条件添加其他配置文件，即include的配置文件的内容不会覆盖当前文件相同的属性
+  profiles:
+    include: adminclient,datasource,discovery,zipkin
+  datasource:
+    dynamic:
+      datasource:
+        quartz:
+          username: root
+          password: Mysql@314159...
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/service_quartz?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
+  application:
+    name: service-code
+
+## 资源服务器配置
+security:
+  oauth2:
+    resource:
+      id: ${spring.application.name}
+      user-info-uri: http://127.0.0.1:8101/user
+      prefer-token-info: false
+
+## 自定义属性配置
+self:
+  security:
+    ## 是否启用安全配置
+    enable: true
+    anonUris: /favicon.ico,/actuator/**
+    only-fetch-by-gateway: false
+  doc:
+    enable: true
+    base-package: com.job.controller
+    title: 定时任务服务
+    description: 定时任务接口接口
+    terms-of-service-url: http://localhost:${server.port}/
+    name: yuangy
+    email: 1483782149@qq.com
+    version: 0.0.1
+
+

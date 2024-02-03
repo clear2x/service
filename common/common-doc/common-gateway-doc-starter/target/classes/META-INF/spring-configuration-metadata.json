@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "self.gateway.doc",
+      "type": "com.gateway.doc.properties.GatewayDocProperties",
+      "sourceType": "com.gateway.doc.properties.GatewayDocProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "self.gateway.doc.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否开启网关文档聚合功能",
+      "sourceType": "com.gateway.doc.properties.GatewayDocProperties"
+    },
+    {
+      "name": "self.gateway.doc.resources",
+      "type": "java.lang.String",
+      "description": "需要暴露doc的服务列表，多个值时用逗号分隔 如 Auth,System",
+      "sourceType": "com.gateway.doc.properties.GatewayDocProperties"
+    }
+  ],
+  "hints": []
+}

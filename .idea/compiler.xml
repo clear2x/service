@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="apm-admin-client-starter" />
+        <module name="common-security-starter" />
+        <module name="common-discovery-starter" />
+        <module name="code" />
+        <module name="test" />
+        <module name="common-datasource-starter" />
+        <module name="common-feign-starter" />
+        <module name="apm-admin" />
+        <module name="common-logging-starter" />
+        <module name="common-bean" />
+        <module name="common-web-starter" />
+        <module name="system" />
+        <module name="common-gateway-doc-starter" />
+        <module name="common-doc-starter" />
+        <module name="common-redis-starter" />
+        <module name="common-zipkin-starter" />
+        <module name="job" />
+        <module name="api-system-starter" />
+        <module name="oauth" />
+        <module name="gateway" />
+        <module name="common-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-system-starter" options="-parameters" />
+      <module name="apm" options="" />
+      <module name="apm-admin" options="-parameters" />
+      <module name="apm-admin-client-starter" options="-parameters" />
+      <module name="code" options="-parameters" />
+      <module name="common" options="" />
+      <module name="common-api" options="" />
+      <module name="common-bean" options="-parameters" />
+      <module name="common-core" options="-parameters" />
+      <module name="common-datasource-starter" options="-parameters" />
+      <module name="common-discovery-starter" options="-parameters" />
+      <module name="common-doc" options="" />
+      <module name="common-doc-starter" options="-parameters" />
+      <module name="common-feign-starter" options="-parameters" />
+      <module name="common-gateway-doc-starter" options="-parameters" />
+      <module name="common-logging-starter" options="-parameters" />
+      <module name="common-redis-starter" options="-parameters" />
+      <module name="common-security-starter" options="-parameters" />
+      <module name="common-web-starter" options="-parameters" />
+      <module name="common-zipkin-starter" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="job" options="-parameters" />
+      <module name="oauth" options="-parameters" />
+      <module name="resource" options="" />
+      <module name="system" options="-parameters" />
+      <module name="test" options="-parameters" />
+    </option>
+  </component>
+</project>

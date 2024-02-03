@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.code.mapper.TestCodeMapper">
+
+    <resultMap id="BaseResultMap" type="com.bean.vo.TestCodeVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="real_name" property="realName"/>
+        <result column="type" property="type"/>
+        <result column="phone" property="phone"/>
+        <result column="email" property="email"/>
+        <result column="certificate_type" property="certificateType"/>
+        <result column="certificate_no" property="certificateNo"/>
+        <result column="bank_card_type" property="bankCardType"/>
+        <result column="bank_card_no" property="bankCardNo"/>
+        <result column="province_id" property="provinceId"/>
+        <result column="city_id" property="cityId"/>
+        <result column="dept_id" property="deptId"/>
+        <result column="gender" property="gender"/>
+        <result column="state" property="state"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="create_by" property="createBy"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_by" property="updateBy"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <sql id="BaseColumns">
+        id,
+        tenant_id,
+        username,
+        password,
+        real_name,
+        type,
+        phone,
+        email,
+        certificate_type,
+        certificate_no,
+        bank_card_type,
+        bank_card_no,
+        province_id,
+        city_id,
+        dept_id,
+        gender,
+        state,
+        is_deleted,
+        create_by,
+        create_time,
+        update_by,
+        update_time
+    </sql>
+
+    <select id="list" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumns"/>
+        FROM
+        t_test_code
+        <where>
+            <if test="query.id!=null">
+                AND id = #{query.id}
+            </if>
+            <if test="query.tenantId!=null">
+                AND tenant_id = #{query.tenantId}
+            </if>
+            <if test="query.username!=null and query.username!=''">
+                AND username = #{query.username}
+            </if>
+            <if test="query.password!=null and query.password!=''">
+                AND password = #{query.password}
+            </if>
+            <if test="query.realName!=null and query.realName!=''">
+                AND real_name = #{query.realName}
+            </if>
+            <if test="query.type!=null">
+                AND type = #{query.type}
+            </if>
+            <if test="query.phone!=null and query.phone!=''">
+                AND phone = #{query.phone}
+            </if>
+            <if test="query.email!=null and query.email!=''">
+                AND email = #{query.email}
+            </if>
+            <if test="query.certificateType!=null">
+                AND certificate_type = #{query.certificateType}
+            </if>
+            <if test="query.certificateNo!=null and query.certificateNo!=''">
+                AND certificate_no = #{query.certificateNo}
+            </if>
+            <if test="query.bankCardType!=null">
+                AND bank_card_type = #{query.bankCardType}
+            </if>
+            <if test="query.bankCardNo!=null and query.bankCardNo!=''">
+                AND bank_card_no = #{query.bankCardNo}
+            </if>
+            <if test="query.provinceId!=null">
+                AND province_id = #{query.provinceId}
+            </if>
+            <if test="query.cityId!=null">
+                AND city_id = #{query.cityId}
+            </if>
+            <if test="query.deptId!=null">
+                AND dept_id = #{query.deptId}
+            </if>
+            <if test="query.gender!=null">
+                AND gender = #{query.gender}
+            </if>
+            <if test="query.state!=null">
+                AND state = #{query.state}
+            </if>
+            <if test="query.isDeleted!=null">
+                AND is_deleted = #{query.isDeleted}
+            </if>
+            <if test="query.createBy!=null and query.createBy!=''">
+                AND create_by = #{query.createBy}
+            </if>
+            <if test="query.createTime!=null">
+                AND create_time = #{query.createTime}
+            </if>
+            <if test="query.updateBy!=null and query.updateBy!=''">
+                AND update_by = #{query.updateBy}
+            </if>
+            <if test="query.updateTime!=null">
+                AND update_time = #{query.updateTime}
+            </if>
+        </where>
+    </select>
+
+</mapper>

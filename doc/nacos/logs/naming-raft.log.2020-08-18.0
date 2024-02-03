@@ -1,0 +1,40 @@
+2020-08-18 15:09:48,237 INFO initializing Raft sub-system
+
+2020-08-18 15:09:48,238 INFO finish loading all datums, size: 0 cost 0 ms.
+
+2020-08-18 15:09:48,245 INFO cache loaded, datum count: 0, current term: 0
+
+2020-08-18 15:09:48,245 INFO finish to load data from disk, cost: 7 ms.
+
+2020-08-18 15:09:48,253 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2020-08-18 15:09:48,015 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.1.36","key":"192.168.1.36:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2020-08-18 15:09:48,262 INFO raft notifier started
+
+2020-08-18 15:09:48,273 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.1.36","key":"192.168.1.36:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-08-18 15:09:48,441 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2020-08-18 15:09:52,835 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2020-08-18 15:09:57,997 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.1.36","key":"192.168.1.36:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-08-18 15:09:57,997 INFO server list is updated, dead: 1, servers: [{"adWeight":0,"alive":false,"ip":"192.168.1.36","key":"192.168.1.36:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2020-08-18 15:09:57,997 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.1.36","key":"192.168.1.36:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-08-18 15:10:00,017 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.1.36","key":"192.168.1.36:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2020-08-18 15:10:02,757 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.1.36:8848","leaderDueMs":18700,"state":"FOLLOWER","term":0,"voteFor":""}, term: 0
+
+2020-08-18 15:36:15,541 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-system
+
+2020-08-18 15:36:18,632 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-gateway
+
+2020-08-18 16:38:16,960 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-oauth
+
+2020-08-18 16:43:33,732 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-code
+
+2020-08-18 16:44:18,908 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-test
+

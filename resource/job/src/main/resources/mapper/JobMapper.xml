@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.job.mapper.JobMapper">
+
+    <resultMap id="BaseResultMap" type="com.job.entity.vo.JobVO">
+        <id column="id" property="id"/>
+        <result column="bean_name" property="beanName"/>
+        <result column="method_name" property="methodName"/>
+        <result column="params" property="params"/>
+        <result column="cron_expression" property="cronExpression"/>
+        <result column="status" property="status"/>
+        <result column="remark" property="remark"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="create_by" property="createBy"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_by" property="updateBy"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <sql id="BaseColumns">
+        id,
+        bean_name,
+        method_name,
+        params,
+        cron_expression,
+        status,
+        remark,
+        is_deleted,
+        create_by,
+        create_time,
+        update_by,
+        update_time
+    </sql>
+
+    <select id="list" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumns"/>
+        FROM
+        job
+        <where>
+            <if test="query.id!=null">
+                AND id = #{query.id}
+            </if>
+            <if test="query.beanName!=null and query.beanName!=''">
+                AND bean_name = #{query.beanName}
+            </if>
+            <if test="query.methodName!=null and query.methodName!=''">
+                AND method_name = #{query.methodName}
+            </if>
+            <if test="query.params!=null and query.params!=''">
+                AND params = #{query.params}
+            </if>
+            <if test="query.cronExpression!=null and query.cronExpression!=''">
+                AND cron_expression = #{query.cronExpression}
+            </if>
+            <if test="query.status!=null">
+                AND status = #{query.status}
+            </if>
+            <if test="query.remark!=null and query.remark!=''">
+                AND remark = #{query.remark}
+            </if>
+        </where>
+    </select>
+
+    <update id="updateStatus">
+        update job
+        set status = #{status}
+        where
+        <foreach collection="ids" open=" id in (" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </update>
+
+</mapper>

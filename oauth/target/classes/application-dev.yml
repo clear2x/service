@@ -1,0 +1,45 @@
+server:
+  port: 8101
+
+spring:
+  ## 引入：application-adminclient.yml配置文件
+  profiles:
+    include: adminclient,datasource,redis,discovery
+  application:
+    name: service-oauth
+
+## 自定义属性配置
+self:
+  oauth:
+    ## 验证码配置
+    enable-code: false
+    code:
+      time: 600
+      type: png
+      width: 130
+      height: 48
+      length: 4
+      char-type: 1
+    enable-jwt: false
+    enable-password-secure-transport: true
+    rsa-private-key: MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAI/pjrQtGgMbGTykTrpsX1gt7F0L2Hrj6U8NNM5DpOl89YAghXYB1DkSo5LammbGxL3Ful+mMjWKG9WF3hDF8EWTrexBook8zATZ5WUIC3+/a4KGrWs86uW1y/HhJZwmim1Q94rilaXOE/5uhIIb505ZfpDKf7go2AVN260NXoHjAgMBAAECgYAA/8cc2x9OHDcNo7pkMvJqg08bykRDfieVg+r076VKdbKipBcpHZQinU2DbH8b7Y9aHfBQT7ATjRTqY5aKGUW0w0pcbXyO70lMJm5uOCBCrT7G+DnSernTXgvynUCObMVfq/+JeBMvItqHkoNeHDVIA9d7Bn5Jm5vBO3cf3xHM+QJBAMKGDR4++nyZ3E7+2ifSp6KemG13bo8BeOHL1FT58BAUNkRWZbb/yI+UDaf2o2Tn5XbIqG5Q7UZxY1yWcVuMx78CQQC9ZMuIG92bfm52UaPho9s0LQEqNQcPo5sJRhK+tkNAxdxBZl43CIYDnGU3rZbvmpJzl5mbBam/UDd66nWJfm7dAkAjDougrtLvz77Pkch5MtK5UQHBgKuxJB/H+bcLlXu5OhtJl5R/NXvMvG71nVJ3Jf/Jt4H7V6RbdKXmkspdKHL7AkAHkY6cqthpTV0mt06ARucMp7vDLwlQM66PaVB4dJotbXrG1ktvkZShck+NMQ+2FYxCuE04J7rH3XHKJLJ7wyS1AkBeQtrZbIF2zTwF+t1w0DtXmQS0a5w5IWAnYcPrqlC9F3NySxq7Kxnt2EZXU4Zp7OrGEoGm8POicGSG73TOkr4e
+    rsa-public-key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCP6Y60LRoDGxk8pE66bF9YLexdC9h64+lPDTTOQ6TpfPWAIIV2AdQ5EqOS2ppmxsS9xbpfpjI1ihvVhd4QxfBFk63sQaKJPMwE2eVlCAt/v2uChq1rPOrltcvx4SWcJoptUPeK4pWlzhP+boSCG+dOWX6Qyn+4KNgFTdutDV6B4wIDAQAB
+  ## 是否启用安全配置
+  security:
+    is-auth-center: true
+    enable: true
+    anonUris: /captcha,/favicon.ico,/actuator/**
+    only-fetch-by-gateway: false
+  doc:
+    enable: true
+    base-package: com.oauth.controller
+    title: 认证中心
+    description: 认证中心接口
+    terms-of-service-url: "http://localhost:8101/"
+    name: yuangy
+    email: 1483782149@qq.com
+    version: 0.0.1
+
+
+
+

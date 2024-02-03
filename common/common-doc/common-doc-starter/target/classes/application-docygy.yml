@@ -1,0 +1,7 @@
+self:
+  doc:
+    enable: true
+    name: yuangy
+    email: 1483782149@qq.com
+    version: 1.0.0
+

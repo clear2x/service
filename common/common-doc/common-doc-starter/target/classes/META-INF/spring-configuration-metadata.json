@@ -1,0 +1,95 @@
+{
+  "groups": [
+    {
+      "name": "self.doc",
+      "type": "com.doc.properties.DocProperties",
+      "sourceType": "com.doc.properties.DocProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "self.doc.base-package",
+      "type": "java.lang.String",
+      "description": "1. 接口扫描路径，如Controller路径 <br> 2. 多个路径用\",\"分隔 <br> 3. 路径可为包的全名或者类的全名，如：com.oauth.controller,org.springframework.security.oauth2.provider.endpoint.TokenEndpoint",
+      "sourceType": "com.doc.properties.DocProperties"
+    },
+    {
+      "name": "self.doc.description",
+      "type": "java.lang.String",
+      "description": "文档描述",
+      "sourceType": "com.doc.properties.DocProperties"
+    },
+    {
+      "name": "self.doc.description-color",
+      "type": "java.lang.String",
+      "description": "文档描述颜色",
+      "sourceType": "com.doc.properties.DocProperties",
+      "defaultValue": "#42b983"
+    },
+    {
+      "name": "self.doc.description-font-size",
+      "type": "java.lang.String",
+      "description": "文档描述字体大小",
+      "sourceType": "com.doc.properties.DocProperties",
+      "defaultValue": "14"
+    },
+    {
+      "name": "self.doc.email",
+      "type": "java.lang.String",
+      "description": "联系方式：邮箱",
+      "sourceType": "com.doc.properties.DocProperties"
+    },
+    {
+      "name": "self.doc.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否开启doc功能",
+      "sourceType": "com.doc.properties.DocProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "self.doc.license",
+      "type": "java.lang.String",
+      "description": "协议",
+      "sourceType": "com.doc.properties.DocProperties",
+      "defaultValue": "Apache 2.0"
+    },
+    {
+      "name": "self.doc.license-url",
+      "type": "java.lang.String",
+      "description": "协议地址",
+      "sourceType": "com.doc.properties.DocProperties",
+      "defaultValue": "https:\/\/www.apache.org\/licenses\/LICENSE-2.0.html"
+    },
+    {
+      "name": "self.doc.name",
+      "type": "java.lang.String",
+      "description": "联系方式：姓名",
+      "sourceType": "com.doc.properties.DocProperties"
+    },
+    {
+      "name": "self.doc.terms-of-service-url",
+      "type": "java.lang.String",
+      "description": "服务url",
+      "sourceType": "com.doc.properties.DocProperties"
+    },
+    {
+      "name": "self.doc.title",
+      "type": "java.lang.String",
+      "description": "文档标题",
+      "sourceType": "com.doc.properties.DocProperties"
+    },
+    {
+      "name": "self.doc.url",
+      "type": "java.lang.String",
+      "description": "联系方式：个人网站url",
+      "sourceType": "com.doc.properties.DocProperties"
+    },
+    {
+      "name": "self.doc.version",
+      "type": "java.lang.String",
+      "description": "版本",
+      "sourceType": "com.doc.properties.DocProperties"
+    }
+  ],
+  "hints": []
+}

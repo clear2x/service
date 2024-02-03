@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.code.mapper.GeneratorConfigMapper">
+
+
+    <!--查询可用数据库-->
+    <select id="list" resultType="com.bean.vo.GeneratorConfigVO">
+        SELECT
+        *
+        FROM
+        code_generator_config
+        <where>
+            <if test="id!=null">
+                AND id = #{id}
+            </if>
+            <if test="dataSource!=null and dataSource!=''">
+                AND database_poll_name = #{dataSource}
+            </if>
+        </where>
+    </select>
+
+</mapper>

@@ -1,0 +1,19 @@
+{
+  "groups": [
+    {
+      "name": "self.lettuce.redis",
+      "type": "com.redis.properties.LettuceRedisProperties",
+      "sourceType": "com.redis.properties.LettuceRedisProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "self.lettuce.redis.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否开启Lettuce Redis",
+      "sourceType": "com.redis.properties.LettuceRedisProperties",
+      "defaultValue": true
+    }
+  ],
+  "hints": []
+}

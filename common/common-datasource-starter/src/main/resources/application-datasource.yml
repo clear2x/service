@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    dynamic:
+      hikari:
+        connection-timeout: 30000
+        max-lifetime: 1800000
+        max-pool-size: 15
+        min-idle: 5
+        connection-test-query: select 1
+        pool-name: HikariCP
+      primary: base
+      datasource:
+        base:
+          username: root
+          password: Mysql@314159...
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/service_demo?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
+      ## 1. p6spy适合在开发环境用于问题分析，其会带来一定的性能耗损，所以在生产环境这个配置最好改为false，将其关闭。
+      p6spy: true
+
+## mybatis配置
+mybatis-plus:
+  ## 别名扫描路径：这个路径下的实体类将自动配置别名
+  type-aliases-package: com.bean.mysql.**
+  ## 枚举扫描
+  type-enums-package: com.**.enums
+  ## mapper扫描
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    ## 指定为null，否则在插入空值时会报“无效的列类型错误”
+    jdbc-type-for-null: null
+    ## 开启驼峰命名
+    map-underscore-to-camel-case: true
+  global-config:
+    ## 设置为false，表示关闭Mybatis Plus Banner打印
+    banner: false

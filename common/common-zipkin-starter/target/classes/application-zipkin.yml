@@ -1,0 +1,14 @@
+spring:
+  ## 链路追踪
+  zipkin:
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      ## 采样率：默认0.1（发送10笔请求采纳1笔），这里设置为1表示100%
+      probability: 1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: scott
+    password: 123456

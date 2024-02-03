@@ -1,0 +1,21 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8901
+        username: service
+        password: 123456
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: "Parent pom providing dependency and plugin management for applications built with Maven"
+    version: "1.0.0-SNAPSHOT"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

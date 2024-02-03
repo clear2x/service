@@ -1,0 +1,101 @@
+server:
+  port: 8844
+
+spring:
+  ## 引入：application-adminclient.yml配置文件
+  profiles:
+    include: adminclient,discovery
+  application:
+    name: service-gateway
+  mvc:
+    static-path-pattern: /resources/static/**
+  cloud:
+    ## sentinel配置
+    sentinel:
+      transport:
+        dashboard: localhost:8485
+        port: 8485
+      eager: true
+      datasource:
+        ## 限流配置
+        na:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: ${spring.application.name}-sentinel-dev
+            groupId: DEFAULT_GROUP
+            rule-type: FLOW
+    gateway:
+      globalcors:
+        ## 参考 org.springframework.web.cors.CorsConfiguration
+        ## 参考 https://www.cnblogs.com/yangzhilong/p/11905007.html
+        cors-configurations:
+          '[/**]':
+            # 允许携带认证信息
+            allow-credentials: true
+            # 允许跨域的源(网站域名/ip)，设置*为全部
+            allowed-origins: "*"
+            #  - "http://localhost:13009"
+            #  - "http://localhost:13010"
+            # 允许跨域请求里的head字段，设置*为全部
+            allowed-headers: "*"
+            # 允许跨域的method， 默认为GET和OPTIONS，设置*为全部
+            allowed-methods: "*"
+            #  - OPTIONS
+            #  - GET
+            #  - POST
+            # 跨域允许的有效期
+            max-age: 3600
+            # 允许response的head信息
+            # 默认仅允许如下6个：
+            #     Cache-Control
+            #     Content-Language
+            #     Content-Type
+            #     Expires
+            #     Last-Modified
+            #     Pragma
+            #exposed-headers:
+      ## 路由配置参考 org.springframework.cloud.gateway.route.RouteDefinition
+      ## https://www.fangzhipeng.com/springcloud/2018/12/05/sc-f-gateway2.html
+      routes:
+        - id: service-oauth
+          ## 路由的目标地址，可以指定为HTTP地址，也可以通过lb://{微服务名称}来指定，lb为load balance（负载均衡）
+          uri: lb://service-oauth
+          predicates:
+            - Path=/service-oauth/**
+          filters:
+            - name: Hystrix
+              args:
+                name: service-oauth-fallback
+                fallbackUri: forward:/fallback/service-oauth
+        - id: service-system
+          uri: lb://service-system
+          predicates:
+            - Path=/service-system/**
+          filters:
+            - name: Hystrix
+              args:
+                name: service-system-fallback
+                fallbackUri: forward:/fallback/service-system
+        - id: service-test
+          uri: lb://service-test
+          predicates:
+            - Path=/service-test/**
+          filters:
+            - name: Hystrix
+              args:
+                name: service-test-fallback
+                fallbackUri: forward:/fallback/service-test
+      ## 将上面的过滤器工厂注释掉，设置全局的过滤器
+      ## 配置为- StripPrefix=1的意思是，请求转发前，将Path的内容截去前面一位。比如/auth/hello会被截取为/hello
+      default-filters:
+        - StripPrefix=1
+
+## 自定义配置
+self:
+  gateway:
+    doc:
+      resources: service-oauth,service-system,service-test
+
+
+
+

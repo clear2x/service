@@ -1,0 +1,202 @@
+2020-03-20 09:15:50,813 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 09:16:27,188 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:16:32,360 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 09:16:32,763 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 09:23:13,776 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:23:13,776 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,346299182636100
+
+2020-03-20 09:23:13,776 INFO send udp packet: 192.168.1.36,58190,346299182636100
+
+2020-03-20 09:23:13,783 INFO received ack: {"type": "push-ack", "lastRefTime":"346299182636100", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 7, total push: 0
+
+2020-03-20 09:23:33,068 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:23:33,068 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,346318474582300
+
+2020-03-20 09:23:33,068 INFO send udp packet: 192.168.1.36,58190,346318474582300
+
+2020-03-20 09:23:33,071 INFO received ack: {"type": "push-ack", "lastRefTime":"346318474582300", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 3, total push: 0
+
+2020-03-20 09:24:12,535 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:24:12,535 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,346357942272600
+
+2020-03-20 09:24:12,536 INFO send udp packet: 192.168.1.36,58190,346357942272600
+
+2020-03-20 09:24:12,538 INFO received ack: {"type": "push-ack", "lastRefTime":"346357942272600", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 2, total push: 0
+
+2020-03-20 09:24:15,917 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:24:15,917 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,346361323535100
+
+2020-03-20 09:24:15,917 INFO send udp packet: 192.168.1.36,58190,346361323535100
+
+2020-03-20 09:24:15,919 INFO received ack: {"type": "push-ack", "lastRefTime":"346361323535100", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 2, total push: 0
+
+2020-03-20 09:24:20,880 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:24:20,880 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,346366286713000
+
+2020-03-20 09:24:20,880 INFO send udp packet: 192.168.1.36,58190,346366286713000
+
+2020-03-20 09:24:20,882 INFO received ack: {"type": "push-ack", "lastRefTime":"346366286713000", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 2, total push: 0
+
+2020-03-20 09:26:22,562 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:26:22,562 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,346487968534200
+
+2020-03-20 09:26:22,562 INFO send udp packet: 192.168.1.36,58190,346487968534200
+
+2020-03-20 09:26:22,563 INFO received ack: {"type": "push-ack", "lastRefTime":"346487968534200", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 1, total push: 0
+
+2020-03-20 09:26:27,301 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:26:27,301 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,346492707959500
+
+2020-03-20 09:26:27,302 INFO send udp packet: 192.168.1.36,58190,346492707959500
+
+2020-03-20 09:26:27,304 INFO received ack: {"type": "push-ack", "lastRefTime":"346492707959500", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 2, total push: 0
+
+2020-03-20 09:27:52,579 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:27:52,579 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,346577985695500
+
+2020-03-20 09:27:52,579 INFO send udp packet: 192.168.1.36,58190,346577985695500
+
+2020-03-20 09:27:52,580 INFO received ack: {"type": "push-ack", "lastRefTime":"346577985695500", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 1, total push: 0
+
+2020-03-20 09:27:54,866 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:27:54,866 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,346580272739200
+
+2020-03-20 09:27:54,866 INFO send udp packet: 192.168.1.36,58190,346580272739200
+
+2020-03-20 09:27:54,867 INFO received ack: {"type": "push-ack", "lastRefTime":"346580272739200", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 1, total push: 0
+
+2020-03-20 09:44:27,825 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:44:27,825 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,347573231648800
+
+2020-03-20 09:44:27,825 INFO send udp packet: 192.168.1.36,58190,347573231648800
+
+2020-03-20 09:44:27,827 INFO received ack: {"type": "push-ack", "lastRefTime":"347573231648800", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 2, total push: 0
+
+2020-03-20 09:44:42,833 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:44:42,833 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,347588239840600
+
+2020-03-20 09:44:42,833 INFO send udp packet: 192.168.1.36,58190,347588239840600
+
+2020-03-20 09:44:42,836 INFO received ack: {"type": "push-ack", "lastRefTime":"347588239840600", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 3, total push: 0
+
+2020-03-20 09:45:04,375 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 09:45:04,375 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:58190, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,58190,347609781705500
+
+2020-03-20 09:45:04,375 INFO send udp packet: 192.168.1.36,58190,347609781705500
+
+2020-03-20 09:45:04,378 INFO received ack: {"type": "push-ack", "lastRefTime":"347609781705500", "data":""} from: 192.168.1.36:, cost: 58190 ms, unacked: 3, total push: 0
+
+2020-03-20 10:21:58,841 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:22:04,886 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 10:22:05,439 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 10:22:05,731 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 10:22:19,447 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 10:22:20,077 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 10:22:29,603 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:22:37,974 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 10:34:23,438 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 10:34:24,040 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 10:34:24,042 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 10:34:24,052 INFO serviceName: DEFAULT_GROUP@@evm-auth changed, schedule push for: 192.168.1.36:57180, agent: Nacos-Java-Client:v1.1.4, key: 192.168.1.36,57180,350569459215600
+
+2020-03-20 10:34:24,052 INFO send udp packet: 192.168.1.36,57180,350569459215600
+
+2020-03-20 10:34:34,054 INFO retry to push data, key: 192.168.1.36,57180,350569459215600
+
+2020-03-20 10:34:34,054 INFO send udp packet: 192.168.1.36,57180,350569459215600
+
+2020-03-20 10:34:34,534 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 10:34:34,883 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 10:34:37,148 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 10:34:38,785 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:34:40,539 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:34:44,056 INFO retry to push data, key: 192.168.1.36,57180,350569459215600
+
+2020-03-20 10:34:44,056 WARN max re-push times reached, retry times 2, key: 192.168.1.36,57180,350569459215600
+
+2020-03-20 10:34:45,514 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:34:58,663 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 10:34:58,946 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 10:34:59,414 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 10:35:08,804 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:35:10,615 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 10:35:10,789 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 10:35:11,898 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 10:35:15,664 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:35:20,639 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:42:13,909 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:42:17,106 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:42:22,080 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:54:45,872 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 10:54:45,946 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 10:54:45,946 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 10:54:56,120 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 10:54:57,270 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 10:54:58,061 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 10:54:59,073 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:55:14,079 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 10:55:53,142 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 16:52:21,041 INFO DEFAULT_GROUP@@evm-server-system is changed, add it to push queue.
+
+2020-03-20 16:52:21,111 INFO DEFAULT_GROUP@@evm-server-test is changed, add it to push queue.
+
+2020-03-20 16:52:21,178 INFO DEFAULT_GROUP@@evm-gateway is changed, add it to push queue.
+
+2020-03-20 16:52:37,862 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+
+2020-03-20 16:52:52,868 INFO DEFAULT_GROUP@@evm-auth is changed, add it to push queue.
+

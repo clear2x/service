@@ -1,0 +1,12 @@
+2020-08-26 10:39:58,700 INFO DEFAULT_GROUP@@service-code {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8803:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-08-26 10:39:58,701 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-code, ips: 192.168.1.36:8804_true,
+
+2020-08-26 10:39:58,752 INFO DEFAULT_GROUP@@service-oauth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-08-26 10:39:58,752 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-oauth, ips: 
+
+2020-08-26 10:39:58,856 INFO DEFAULT_GROUP@@service-code {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8804:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-08-26 10:39:58,856 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-code, ips: 
+

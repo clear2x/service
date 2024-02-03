@@ -1,0 +1,14 @@
+server:
+  port: 8901
+
+spring:
+  application:
+    name: service-apm-admin
+  boot:
+    admin:
+      ui:
+        title: ${spring.application.name}
+  security:
+    user:
+      name: service
+      password: 123456

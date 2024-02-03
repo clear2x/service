@@ -1,0 +1,51 @@
+{
+  "groups": [
+    {
+      "name": "self.security",
+      "type": "com.security.properties.SecurityProperties",
+      "sourceType": "com.security.properties.SecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "self.security.anon-uris",
+      "type": "java.lang.String",
+      "description": "免认证资源路径，支持通配符 多个值时使用逗号分隔",
+      "sourceType": "com.security.properties.SecurityProperties"
+    },
+    {
+      "name": "self.security.auth-uri",
+      "type": "java.lang.String",
+      "description": "配置需要认证的uri，默认为所有\/**",
+      "sourceType": "com.security.properties.SecurityProperties"
+    },
+    {
+      "name": "self.security.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否开启安全配置",
+      "sourceType": "com.security.properties.SecurityProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "self.security.is-auth-center",
+      "type": "java.lang.Boolean",
+      "description": "是否是授权（认证）中心",
+      "sourceType": "com.security.properties.SecurityProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "self.security.only-fetch-by-gateway",
+      "type": "java.lang.Boolean",
+      "description": "是否只能通过网关获取资源",
+      "sourceType": "com.security.properties.SecurityProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "self.security.scope",
+      "type": "java.lang.String",
+      "description": "配置需要什么scope才可访问，如果是允许多个scope，中间用\",\"逗号分隔，例如：app,web",
+      "sourceType": "com.security.properties.SecurityProperties"
+    }
+  ],
+  "hints": []
+}

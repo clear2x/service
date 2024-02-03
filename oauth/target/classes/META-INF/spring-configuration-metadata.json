@@ -1,0 +1,104 @@
+{
+  "groups": [
+    {
+      "name": "self.oauth",
+      "type": "com.oauth.properties.OauthProperties",
+      "sourceType": "com.oauth.properties.OauthProperties"
+    },
+    {
+      "name": "self.oauth.code",
+      "type": "com.oauth.properties.ValidateCodeProperties",
+      "sourceType": "com.oauth.properties.ValidateCodeProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "self.oauth.code",
+      "type": "com.oauth.properties.ValidateCodeProperties",
+      "description": "验证码配置",
+      "sourceType": "com.oauth.properties.OauthProperties"
+    },
+    {
+      "name": "self.oauth.code.char-type",
+      "type": "java.lang.Integer",
+      "description": "验证码值的类型 1. 数字加字母 2. 纯数字 3. 纯字母",
+      "sourceType": "com.oauth.properties.ValidateCodeProperties",
+      "defaultValue": 2
+    },
+    {
+      "name": "self.oauth.code.height",
+      "type": "java.lang.Integer",
+      "description": "图片高度，px",
+      "sourceType": "com.oauth.properties.ValidateCodeProperties",
+      "defaultValue": 48
+    },
+    {
+      "name": "self.oauth.code.length",
+      "type": "java.lang.Integer",
+      "description": "验证码位数",
+      "sourceType": "com.oauth.properties.ValidateCodeProperties",
+      "defaultValue": 4
+    },
+    {
+      "name": "self.oauth.code.time",
+      "type": "java.lang.Long",
+      "description": "验证码有效时间，单位秒",
+      "sourceType": "com.oauth.properties.ValidateCodeProperties",
+      "defaultValue": 120
+    },
+    {
+      "name": "self.oauth.code.type",
+      "type": "java.lang.String",
+      "description": "验证码类型，可选值 png和 gif",
+      "sourceType": "com.oauth.properties.ValidateCodeProperties"
+    },
+    {
+      "name": "self.oauth.code.width",
+      "type": "java.lang.Integer",
+      "description": "图片宽度，px",
+      "sourceType": "com.oauth.properties.ValidateCodeProperties",
+      "defaultValue": 130
+    },
+    {
+      "name": "self.oauth.enable-code",
+      "type": "java.lang.Boolean",
+      "description": "是否开启验证码功能",
+      "sourceType": "com.oauth.properties.OauthProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "self.oauth.enable-jwt",
+      "type": "java.lang.Boolean",
+      "description": "是否使用 JWT令牌",
+      "sourceType": "com.oauth.properties.OauthProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "self.oauth.enable-password-secure-transport",
+      "type": "java.lang.Boolean",
+      "description": "是否启用密码安全传输（RSA加密）",
+      "sourceType": "com.oauth.properties.OauthProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "self.oauth.jwt-access-key",
+      "type": "java.lang.String",
+      "description": "JWT加签密钥",
+      "sourceType": "com.oauth.properties.OauthProperties",
+      "defaultValue": "66F815F290887CC231EB566D42112C1450C78C3EFE762EBECCB44D792F26588C"
+    },
+    {
+      "name": "self.oauth.rsa-private-key",
+      "type": "java.lang.String",
+      "description": "RSA私钥",
+      "sourceType": "com.oauth.properties.OauthProperties"
+    },
+    {
+      "name": "self.oauth.rsa-public-key",
+      "type": "java.lang.String",
+      "description": "RSA公钥",
+      "sourceType": "com.oauth.properties.OauthProperties"
+    }
+  ],
+  "hints": []
+}

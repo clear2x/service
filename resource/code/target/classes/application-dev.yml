@@ -1,0 +1,32 @@
+server:
+  port: 8803
+
+spring:
+  ## 引入：application-adminclient.yml配置文件
+  profiles:
+    include: adminclient,datasource,discovery,zipkin,docygy
+  application:
+    name: service-code
+
+## 资源服务器配置
+security:
+  oauth2:
+    resource:
+      id: ${spring.application.name}
+      user-info-uri: http://127.0.0.1:8101/user
+      prefer-token-info: false
+
+## 自定义属性配置
+self:
+  security:
+    ## 是否启用安全配置
+    enable: true
+    anonUris: /favicon.ico,/actuator/**
+    only-fetch-by-gateway: false
+  doc:
+    base-package: com.code.controller
+    title: 代码生成服务
+    description: 代码生成服务接口
+    terms-of-service-url: "http://localhost:8803/"
+
+

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 日志级别从低到高分为TRACE < DEBUG < INFO < WARN < ERROR < FATAL，如果设置为WARN，则低于WARN的信息都不会输出 -->
+
+    <!-- 定义日志文件的存储地址 -->
+    <springProperty scope="context" name="LOG_DIR" source="logging.file.path" defaultValue="../logs"/>
+    <!--  日志文件前缀  -->
+    <property name="FILE_PREFIX" value="service-test_"/>
+    <!--  日志保留天数  -->
+    <property name="MAX_DAYS" value="30"/>
+    <!--  日志文件上限大小  -->
+    <property name="TOTAL_SIZE" value="2GB"/>
+    <!-- 单文件大小 -->
+    <property name="MAX_FILE_SIZE" value="20MB"/>
+
+    <!--
+        %p:输出优先级，即DEBUG,INFO,WARN,ERROR,FATAL
+        %r:输出自应用启动到输出该日志讯息所耗费的毫秒数
+        %t:输出产生该日志事件的线程名
+        %f:输出日志讯息所属的类别的类别名
+        %c:输出日志讯息所属的类的全名
+        %d:输出日志时间点的日期或时间，指定格式的方式： %d{yyyy-MM-dd HH:mm:ss}
+        %line:输出日志事件的发生位置，即输出日志讯息的语句在他所在类别的第几行。
+        %m:输出代码中指定的讯息，如log(message)中的message
+        %n:输出一个换行符号
+        %thread 输出日志的进程名字，这在Web应用以及异步任务处理中很有用
+        %-5level 日志级别，并且使用5个字符靠左对齐
+        %highlight 高亮显示
+        %logger{50} 日志输出者的名字
+        %msg 日志信息
+        %-50.50
+    -->
+    <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度 %msg：日志消息，%n是换行符-->
+    <property name="pattern" value="%d{yyyy-MM-dd:HH:mm:ss.SSS} [%thread] [%-5level] [%-50(%logger{100}:%line)] %msg%n"/>
+    <!-- 包含Spring Cloud Sleuth提供的TraceId和SpanId等信息 -->
+    <property name="sleuth.pattern" value="%d{yyyy-MM-dd:HH:mm:ss.SSS} [%thread] [%-5level] [${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}] [%-50(%logger{100}:%line)] %msg%n"/>
+    <!-- 彩色日志 -->
+    <property name="log.colorPattern" value="%magenta(%d{yyyy-MM-dd HH:mm:ss}) %highlight(%-5level) %boldCyan([${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}]) %yellow(%thread) %green(%logger) %msg%n"/>
+    <property name="log.pattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5level [${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}] %thread %logger %msg%n"/>
+
+    <!--输出到 logstash的 appender-->
+    <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>localhost:4560</destination>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>
+
+    <!--
+        Appender: 设置日志信息的去向,常用的有以下几个
+            ch.qos.logback.core.ConsoleAppender (控制台)
+            ch.qos.logback.core.rolling.RollingFileAppender (文件大小到达指定尺寸的时候产生一个新文件)
+            ch.qos.logback.core.FileAppender (文件)
+    -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 字符串System.out（默认）或者System.err -->
+        <target>System.out</target>
+        <!-- 对记录事件进行格式化 -->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${sleuth.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SYSTEM_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 被写入的文件名，可以是相对目录，也可以是绝对目录，如果上级目录不存在会自动创建 -->
+        <file>${LOG_DIR}/${FILE_PREFIX}info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_DIR}/${FILE_PREFIX}info.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>${MAX_DAYS}</maxHistory>
+        </rollingPolicy>
+        <!-- 追加日志方式记录 -->
+        <append>true</append>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${sleuth.pattern}</pattern>
+        </encoder>
+        <!-- 过滤INFO级别以下的日志 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <appender name="SYSTEM_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/${FILE_PREFIX}error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_DIR}/${FILE_PREFIX}error.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>${MAX_DAYS}</maxHistory>
+        </rollingPolicy>
+        <append>true</append>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${sleuth.pattern}</pattern>
+        </encoder>
+        <!-- 此日志文档只记录ERROR级别的 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="SQL_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/${FILE_PREFIX}sql_info.log</file>
+        <!-- 当发生滚动时，决定RollingFileAppender的行为，涉及文件移动和重命名。属性class定义具体的滚动策略类 %i-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/${FILE_PREFIX}sql_info_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>${MAX_DAYS}</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${MAX_FILE_SIZE}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <append>true</append>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${sleuth.pattern}</pattern>
+        </encoder>
+        <!-- 过滤DEBUG级别以下的日志 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <appender name="SQL_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/${FILE_PREFIX}sql_error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/${FILE_PREFIX}sql_error_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>${MAX_DAYS}</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${MAX_FILE_SIZE}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${sleuth.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 默认配置 -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="SYSTEM_INFO"/>
+        <appender-ref ref="SYSTEM_ERROR"/>
+    </root>
+    <!-- 特定包 -->
+    <logger name="com.evm.vs.mapper" level="DEBUG" additivity="true">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="SQL_INFO"/>
+        <appender-ref ref="SQL_ERROR"/>
+    </logger>
+
+    <!-- 开发环境下的日志配置 spring.profiles.active-->
+    <springProfile name="dev">
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="SYSTEM_INFO"/>
+            <appender-ref ref="SYSTEM_ERROR"/>
+            <!-- 输出日志到logstash -->
+            <appender-ref ref="logstash"/>
+        </root>
+        <!-- 特定包 -->
+        <logger name="com.evm.vs.mapper" level="DEBUG" additivity="true">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="SQL_INFO"/>
+            <appender-ref ref="SQL_ERROR"/>
+            <!-- 输出日志到logstash -->
+            <appender-ref ref="logstash"/>
+        </logger>
+    </springProfile>
+
+    <!-- 测试环境 -->
+    <springProfile name="test">
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="SYSTEM_INFO"/>
+            <appender-ref ref="SYSTEM_ERROR"/>
+        </root>
+        <logger name="com.evm.vs.mapper" level="DEBUG" additivity="true">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="SQL_INFO"/>
+            <appender-ref ref="SQL_ERROR"/>
+        </logger>
+    </springProfile>
+
+</configuration>

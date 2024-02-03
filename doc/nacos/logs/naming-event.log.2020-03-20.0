@@ -1,0 +1,198 @@
+2020-03-20 09:15:49,812 INFO DEFAULT_GROUP@@evm-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8301:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 09:15:49,812 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-gateway, ips: 192.168.1.36:8301_true,
+
+2020-03-20 09:16:26,186 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 09:16:26,186 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 192.168.1.36:8101_true,
+
+2020-03-20 09:16:31,358 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 09:16:31,358 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 192.168.1.36:8201_true,
+
+2020-03-20 09:16:31,762 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 09:16:31,762 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 192.168.1.36:8202_true,
+
+2020-03-20 09:23:12,775 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 09:23:12,775 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 
+
+2020-03-20 09:23:32,067 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 09:23:32,067 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 192.168.1.36:8101_true,
+
+2020-03-20 09:24:11,533 INFO {POS} {IP-DISABLED} valid: 192.168.1.36:8101@DEFAULT@DEFAULT_GROUP@@evm-auth, region: unknown, msg: client timeout after 15000, last beat: 1584667432049
+
+2020-03-20 09:24:14,915 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 192.168.1.36:8101_false,
+
+2020-03-20 09:24:19,879 INFO service: DEFAULT_GROUP@@evm-auth {POS} {IP-ENABLED} valid: 192.168.1.36:8101@DEFAULT, region: unknown, msg: client beat ok
+
+2020-03-20 09:26:21,560 INFO {POS} {IP-DISABLED} valid: 192.168.1.36:8101@DEFAULT@DEFAULT_GROUP@@evm-auth, region: unknown, msg: client timeout after 15000, last beat: 1584667564952
+
+2020-03-20 09:26:26,300 INFO service: DEFAULT_GROUP@@evm-auth {POS} {IP-ENABLED} valid: 192.168.1.36:8101@DEFAULT, region: unknown, msg: client beat ok
+
+2020-03-20 09:27:51,578 INFO {POS} {IP-DISABLED} valid: 192.168.1.36:8101@DEFAULT@DEFAULT_GROUP@@evm-auth, region: unknown, msg: client timeout after 15000, last beat: 1584667654938
+
+2020-03-20 09:27:53,864 INFO service: DEFAULT_GROUP@@evm-auth {POS} {IP-ENABLED} valid: 192.168.1.36:8101@DEFAULT, region: unknown, msg: client beat ok
+
+2020-03-20 09:44:26,824 INFO {POS} {IP-DISABLED} valid: 192.168.1.36:8101@DEFAULT@DEFAULT_GROUP@@evm-auth, region: unknown, msg: client timeout after 15000, last beat: 1584668651294
+
+2020-03-20 09:44:41,832 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-03-20 09:44:41,832 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 
+
+2020-03-20 09:45:03,374 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 09:45:03,374 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 192.168.1.36:8101_true,
+
+2020-03-20 10:21:57,839 INFO DEFAULT_GROUP@@evm-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8301:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:21:57,839 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-gateway, ips: 
+
+2020-03-20 10:22:03,884 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:22:03,884 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 
+
+2020-03-20 10:22:04,438 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:22:04,438 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 
+
+2020-03-20 10:22:04,727 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:22:04,727 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 
+
+2020-03-20 10:22:18,446 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:22:18,446 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 192.168.1.36:8202_true,
+
+2020-03-20 10:22:19,075 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:22:19,076 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 192.168.1.36:8201_true,
+
+2020-03-20 10:22:28,602 INFO DEFAULT_GROUP@@evm-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8301:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:22:28,602 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-gateway, ips: 192.168.1.36:8301_true,
+
+2020-03-20 10:22:36,969 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:22:36,969 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 192.168.1.36:8101_true,
+
+2020-03-20 10:34:22,437 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:34:22,437 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 
+
+2020-03-20 10:34:23,039 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:34:23,039 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 
+
+2020-03-20 10:34:23,040 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:34:23,041 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 
+
+2020-03-20 10:34:33,533 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:34:33,533 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 192.168.1.36:8202_true,
+
+2020-03-20 10:34:33,882 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:34:33,882 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 192.168.1.36:8101_true,
+
+2020-03-20 10:34:36,146 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:34:36,146 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 192.168.1.36:8201_true,
+
+2020-03-20 10:34:37,783 INFO {POS} {IP-DISABLED} valid: 192.168.1.36:8301@DEFAULT@DEFAULT_GROUP@@evm-gateway, region: unknown, msg: client timeout after 15000, last beat: 1584671659008
+
+2020-03-20 10:34:39,538 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-gateway, ips: 192.168.1.36:8301_false,
+
+2020-03-20 10:34:44,513 INFO service: DEFAULT_GROUP@@evm-gateway {POS} {IP-ENABLED} valid: 192.168.1.36:8301@DEFAULT, region: unknown, msg: client beat ok
+
+2020-03-20 10:34:57,661 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:34:57,661 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 
+
+2020-03-20 10:34:57,943 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:34:57,943 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 
+
+2020-03-20 10:34:58,405 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:34:58,406 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 
+
+2020-03-20 10:35:07,802 INFO {POS} {IP-DISABLED} valid: 192.168.1.36:8301@DEFAULT@DEFAULT_GROUP@@evm-gateway, region: unknown, msg: client timeout after 15000, last beat: 1584671689516
+
+2020-03-20 10:35:09,614 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:35:09,614 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 192.168.1.36:8202_true,
+
+2020-03-20 10:35:09,788 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:35:09,788 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 192.168.1.36:8101_true,
+
+2020-03-20 10:35:10,897 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:35:10,897 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 192.168.1.36:8201_true,
+
+2020-03-20 10:35:14,662 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-gateway, ips: 192.168.1.36:8301_false,
+
+2020-03-20 10:35:19,638 INFO service: DEFAULT_GROUP@@evm-gateway {POS} {IP-ENABLED} valid: 192.168.1.36:8301@DEFAULT, region: unknown, msg: client beat ok
+
+2020-03-20 10:42:12,907 INFO {POS} {IP-DISABLED} valid: 192.168.1.36:8301@DEFAULT@DEFAULT_GROUP@@evm-gateway, region: unknown, msg: client timeout after 15000, last beat: 1584672114893
+
+2020-03-20 10:42:16,105 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-gateway, ips: 192.168.1.36:8301_false,
+
+2020-03-20 10:42:21,079 INFO service: DEFAULT_GROUP@@evm-gateway {POS} {IP-ENABLED} valid: 192.168.1.36:8301@DEFAULT, region: unknown, msg: client beat ok
+
+2020-03-20 10:54:44,871 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:54:44,871 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 
+
+2020-03-20 10:54:44,945 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:54:44,946 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 
+
+2020-03-20 10:54:44,946 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:54:44,946 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 
+
+2020-03-20 10:54:55,118 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:54:55,118 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 192.168.1.36:8202_true,
+
+2020-03-20 10:54:56,268 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:54:56,268 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 192.168.1.36:8101_true,
+
+2020-03-20 10:54:57,060 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:54:57,060 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 192.168.1.36:8201_true,
+
+2020-03-20 10:54:58,072 INFO {POS} {IP-DISABLED} valid: 192.168.1.36:8301@DEFAULT@DEFAULT_GROUP@@evm-gateway, region: unknown, msg: client timeout after 15000, last beat: 1584672881608
+
+2020-03-20 10:55:13,077 INFO DEFAULT_GROUP@@evm-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8301:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-03-20 10:55:13,077 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-gateway, ips: 
+
+2020-03-20 10:55:52,140 INFO DEFAULT_GROUP@@evm-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.36:8301:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 10:55:52,140 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-gateway, ips: 192.168.1.36:8301_true,
+
+2020-03-20 16:52:20,040 INFO DEFAULT_GROUP@@evm-server-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 16:52:20,040 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-system, ips: 
+
+2020-03-20 16:52:20,109 INFO DEFAULT_GROUP@@evm-server-test {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8202:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 16:52:20,109 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-server-test, ips: 
+
+2020-03-20 16:52:20,178 INFO DEFAULT_GROUP@@evm-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8301:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-03-20 16:52:20,178 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-gateway, ips: 
+
+2020-03-20 16:52:36,861 INFO {POS} {IP-DISABLED} valid: 192.168.1.36:8101@DEFAULT@DEFAULT_GROUP@@evm-auth, region: unknown, msg: client timeout after 15000, last beat: 1584694338036
+
+2020-03-20 16:52:51,866 INFO DEFAULT_GROUP@@evm-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.36:8101:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-03-20 16:52:51,866 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@evm-auth, ips: 
+
